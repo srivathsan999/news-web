@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — News capabilities catalog</title>
+  <meta name="description" content="Browse the complete News service catalog featuring strategy, creative, product, growth, analytics, and localization packages.">
+  <link rel="canonical" href="https://www.example.com/services.html">
+  <meta property="og:title" content="News — Service Experts for Modern Businesses">
+  <meta property="og:description" content="Flexible services template with light/dark modes, RTL support, and Tailwind-powered layouts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.example.com/index.html">
+  <link rel="icon" href="assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#4f46e5',
+              light: '#818cf8'
+            },
+            accent: {
+              DEFAULT: '#0ea5e9'
+            }
+          },
+          fontFamily: {
+            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-white text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+    <div class="container relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex shrink-0 items-center gap-2 text-lg font-semibold uppercase tracking-widest text-brand">
+        <img src="assets/icons/logo-mark.svg" alt="News logo mark" class="h-8 w-8">
+        News
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium uppercase tracking-wide lg:flex flex-nowrap ml-6">
+        <a class="nav-link whitespace-nowrap" href="index.html">Home 1</a>
+        <a class="nav-link whitespace-nowrap" href="home2.html">Home 2</a>
+        <div class="relative group categories-group">
+          <a href="#" class="nav-link inline-flex items-center gap-1 leading-none">
+            Categories
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown absolute left-0 top-full z-50 mt-2 hidden min-w-[12rem] rounded-2xl border border-slate-200 bg-white p-3 shadow-xl group-hover:block dark:border-white/10 dark:bg-slate-900">
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="technology.html">Technology</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="business.html">Business</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="sports.html">Sports</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="entertainment.html">Entertainment</a>
+          </div>
+        </div>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="about.html">About</a>
+        
+        <a class="nav-link" href="blog.html#search" aria-label="Search">Search</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="login.html">Login</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="register.html">Register</a>
+      </nav>
+      <div class="flex items-center gap-2 ml-6">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="toggle-btn">
+          <span class="sr-only">Toggle theme</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.05 16.95l-1.42 1.42m12.02 0-1.42-1.42M7.05 7.05 5.63 5.63" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+          </svg>
+        </button>
+        <button id="mobileToggle" class="ml-1 inline-flex items-center rounded-full border border-slate-200 p-2 text-sm font-semibold lg:hidden dark:border-white/10">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="absolute right-4 top-full hidden w-64 rounded-3xl border border-slate-200 bg-white p-4 shadow-xl dark:border-white/10 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wide">
+          <a class="nav-link" href="index.html">Home 1</a>
+          <a class="nav-link" href="home2.html">Home 2</a>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Categories</p>
+          <a class="nav-link" href="technology.html">Technology</a>
+          <a class="nav-link" href="business.html">Business</a>
+          <a class="nav-link" href="sports.html">Sports</a>
+          <a class="nav-link" href="entertainment.html">Entertainment</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="blog.html#search">Search</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="login.html">Login</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="bg-slate-50 py-16 dark:bg-slate-900">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="text-center">
+          <p class="inline-flex items-center rounded-full border border-brand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Capability catalog</p>
+          <h1 class="mt-4 font-heading text-4xl font-bold">Select the path that matches your momentum</h1>
+          <p class="mt-4 text-base text-slate-500 dark:text-slate-300">Each service is designed to plug into sprint-based workflows. Toggle RTL, dark mode, and components per market.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+          <span class="badge">Strategy</span>
+          <span class="badge">Creative</span>
+          <span class="badge">Product</span>
+          <span class="badge">Growth</span>
+          <span class="badge">Analytics</span>
+          <span class="badge">Localization</span>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Brand newsroom</h3>
+              <span class="badge">4 weeks</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Messaging sprints, tone stacks, and launch-ready templates in English + Arabic.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ Positioning & manifesto</li>
+              <li>✔ Voice kit & terminology</li>
+              <li>✔ Press + analyst toolkit</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Product launchpad</h3>
+              <span class="badge">6 weeks</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Web, onboarding, and admin UI shipped together so teams have one source of truth.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ Design system tokens</li>
+              <li>✔ Responsive marketing site</li>
+              <li>✔ Admin dashboard starter</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Growth enablement</h3>
+              <span class="badge">Retainer</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Lifecycle strategy, CRM playbooks, and analytics instrumentation with RevOps support.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ Campaign briefs</li>
+              <li>✔ KPI dashboards</li>
+              <li>✔ Experiment tracking</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Public sector lab</h3>
+              <span class="badge">Custom</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Citizen-first service design with WCAG AA compliance and policy-ready documentation.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ Accessibility audits & scorecards</li>
+              <li>✔ Policy alignment workshops</li>
+              <li>✔ Compliance-ready service blueprints</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Localization sprints</h3>
+              <span class="badge">2 weeks</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Translate flows, QA RTL layouts, and document cultural nuances with native reviewers.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ Market-ready copy decks (EN/AR/UR)</li>
+              <li>✔ RTL layout QA & component fixes</li>
+              <li>✔ Reviewer notes + cultural guidance</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+          <article class="service-card">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Fractional ops</h3>
+              <span class="badge">Monthly</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Plug-in operations leaders to run GTM reviews, budget modeling, and vendor onboarding.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li>✔ GTM health reviews & scorecards</li>
+              <li>✔ Budget + scenario modeling</li>
+              <li>✔ Vendor sourcing & onboarding playbooks</li>
+            </ul>
+            <a href="service-details.html" class="cta-link">View deliverables</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-slate-950">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+          <div class="space-y-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Delivery snapshots</p>
+            <h2 class="font-heading text-3xl font-bold text-slate-900 dark:text-white">Design libraries, research hubs, and operations war rooms.</h2>
+            <p class="text-base text-slate-600 dark:text-slate-300">Every engagement ships with documentation and visual assets. These captures show the fidelity you can expect from kickoff decks to final QA.</p>
+            <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-300">
+              <li>• Layered Figma + Webflow kits with RTL variants.</li>
+              <li>• Airtable-powered status trackers embedded into hero sections.</li>
+              <li>• Hybrid workshops streamed with multilingual captions.</li>
+            </ul>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Design system board" class="h-64 w-full rounded-3xl object-cover shadow-2xl" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80" alt="Workshop presentation" class="h-64 w-full rounded-3xl object-cover shadow-2xl" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Ops status dashboard" class="h-64 w-full rounded-3xl object-cover shadow-2xl sm:col-span-2" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-slate-900 py-16 text-white">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div class="grid gap-10 md:grid-cols-2">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-brand-light">How it works</p>
+            <h2 class="mt-4 font-heading text-3xl font-bold">A predictable path from kickoff to handoff</h2>
+            <p class="mt-4 text-white/70">We assign a producer + craft leads. Every deliverable is versioned and translated when needed.</p>
+          </div>
+          <ol class="space-y-4 text-sm text-white/80">
+            <li class="rounded-2xl border border-white/10 p-4">
+              <p class="text-brand-light text-xs uppercase tracking-[0.3em]">Week 0</p>
+              <p class="font-semibold">Intake + success metrics</p>
+            </li>
+            <li class="rounded-2xl border border-white/10 p-4">
+              <p class="text-brand-light text-xs uppercase tracking-[0.3em]">Week 1-2</p>
+              <p class="font-semibold">Strategy + language systems</p>
+            </li>
+            <li class="rounded-2xl border border-white/10 p-4">
+              <p class="text-brand-light text-xs uppercase tracking-[0.3em]">Week 3-4</p>
+              <p class="font-semibold">Design + build</p>
+            </li>
+            <li class="rounded-2xl border border-white/10 p-4">
+              <p class="text-brand-light text-xs uppercase tracking-[0.3em]">Week 5+</p>
+              <p class="font-semibold">QA, localization, enablement</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-slate-50 dark:bg-slate-900">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="mb-12 text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Case studies</p>
+          <h2 class="font-heading text-3xl font-bold text-slate-900 dark:text-white">Proof from active programs</h2>
+          <p class="mt-3 text-slate-500 dark:text-slate-300">Screen grabs and KPIs from teams who deployed the News service stack.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80" alt="Analytics dashboard" class="h-40 w-full rounded-2xl object-cover" loading="lazy">
+            <h3 class="mt-4 text-lg font-semibold text-slate-900 dark:text-white">SaaS workflow suite</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">Brand newsroom + product launchpad</p>
+            <p class="mt-2 text-xs uppercase tracking-[0.3em] text-emerald-500">Result: 3.1x demo win rate</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?auto=format&fit=crop&w=900&q=80" alt="Editorial control room" class="h-40 w-full rounded-2xl object-cover" loading="lazy">
+            <h3 class="mt-4 text-lg font-semibold text-slate-900 dark:text-white">Public broadcaster</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">Localization sprint + fractional ops</p>
+            <p class="mt-2 text-xs uppercase tracking-[0.3em] text-amber-500">Result: 2 languages live in 6 weeks</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Meeting notes" class="h-40 w-full rounded-2xl object-cover" loading="lazy">
+            <h3 class="mt-4 text-lg font-semibold text-slate-900 dark:text-white">Government services</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">Public sector lab</p>
+            <p class="mt-2 text-xs uppercase tracking-[0.3em] text-sky-400">Result: 67% self-service adoption</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-slate-200 p-8 dark:border-white/10">
+            <p class="text-xs uppercase tracking-[0.3em] text-brand">What's included</p>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <li>+ Onboarding questionnaire + template map</li>
+              <li>+ Dedicated Slack/Teams channel</li>
+              <li>+ Weekly video updates + Loom recaps</li>
+              <li>+ Component library with documentation</li>
+              <li>+ Handoff package (Figma, HTML, JSON)</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-slate-200 p-8 dark:border-white/10">
+            <p class="text-xs uppercase tracking-[0.3em] text-brand">Add-ons</p>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <li>• Paid media + analytics tagging</li>
+              <li>• Customer research (EN/AR interviews)</li>
+              <li>• Executive visibility coaching</li>
+              <li>• Knowledge base + LMS buildout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-brand to-accent px-6 py-12 text-center text-white">
+        <p class="text-xs uppercase tracking-[0.3em]">Preview the experience</p>
+        <h2 class="mt-4 font-heading text-3xl font-bold">Book a 30-minute service tour</h2>
+        <p class="mt-4 text-base text-white/80">We’ll show the exact files, handoffs, and dashboard views you receive.</p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <a href="contact.html" class="rounded-full bg-white px-6 py-3 font-semibold text-slate-900">Schedule time</a>
+          <a href="pricing.html" class="rounded-full border border-white px-6 py-3 font-semibold text-white">Download overview</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950 text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black"></div>
+    <div class="relative">
+      <div class="container mx-auto max-w-6xl px-4 py-16">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <img src="assets/icons/logo-mark.svg" alt="Company logo" class="h-6 w-6">
+              <p class="text-lg font-semibold tracking-wide">News Magazine</p>
+            </div>
+            <p class="text-sm text-white/70">Stories that move the culture forward. Independent journalism covering technology, lifestyle, design, travel, and the world ahead.</p>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.4em] text-white/60">
+              <span class="h-2 w-2 rounded-full bg-brand"></span>
+              Global Desk
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Navigation</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="index.html">Home</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html">Categories</a></li>
+              <li><a class="hover:text-brand-light" href="about.html">About</a></li>
+              <li><a class="hover:text-brand-light" href="contact.html">Contact</a></li>
+              <li><a class="hover:text-brand-light" href="pricing.html">Membership</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Categories</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="blog.html#technology">Technology</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#lifestyle">Lifestyle</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#travel">Travel</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#health">Health &amp; Fitness</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#business">Business</a></li>
+            </ul>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Follow us</p>
+              <div class="mt-5 flex gap-3">
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.linkedin.com" aria-label="LinkedIn">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5a2.5 2.5 0 11-.01 5.001 2.5 2.5 0 01.01-5.001zM3 8.75h3.96V21H3zM9.75 8.75h3.8v1.68h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21H18.1v-5.47c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9.75z"/>
+                  </svg>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.instagram.com" aria-label="Instagram">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 2c-2.76 0-5 2.24-5 5v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A5.5 5.5 0 1017.5 13 5.51 5.51 0 0012 7.5zm0 2A3.5 3.5 0 1115.5 13 3.5 3.5 0 0112 9.5zm6.25-3a1 1 0 11-1 1 1 1 0 011-1z"/>
+                  </svg>
+                  <span class="sr-only">Instagram</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.facebook.com" aria-label="Facebook">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.5 9H16l.5-3h-3V4.75C13.5 4.06 13.77 3.5 14.9 3.5H16V1.14C15.76 1.1 15 1 13.96 1 11.8 1 10.34 2.24 10.34 4.52V6H8v3h2.34V21h3.16V9z"/>
+                  </svg>
+                  <span class="sr-only">Facebook</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.twitter.com" aria-label="Twitter">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.273l-7.16 8.19L22.5 21.75h-6.406l-5.023-6.576-5.73 6.576H2.064l7.66-8.8L1.5 2.25h6.594l4.546 5.983zM17.156 19.59h1.813L7.02 4.31H5.078z"/>
+                  </svg>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Newsletter</p>
+              <p class="mt-2 text-sm text-white/70">Weekly briefings on design, product, and culture. No noise.</p>
+              <form class="mt-4 flex flex-col gap-3 sm:flex-row" action="#" method="post">
+                <label class="sr-only" for="footer-email-services">Email address</label>
+                <input id="footer-email-services" type="email" required placeholder="Email address" class="w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none">
+                <button type="submit" class="rounded-2xl bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-light">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>© 2025 News Magazine. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="privacy.html" class="hover:text-brand-light">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-brand-light">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "News Studio",
+      "url": "https://www.example.com/",
+      "logo": "https://www.example.com/assets/icons/logo-mark.svg",
+      "sameAs": [
+        "https://www.linkedin.com/company/example",
+        "https://twitter.com/example"
+      ],
+      "areaServed": "Global",
+      "availableLanguage": ["en", "ar", "fr"]
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

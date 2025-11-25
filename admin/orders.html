@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Orders</title>
+  <meta name="description" content="Track template and service orders with status chips.">
+  <link rel="canonical" href="https://www.example.com/admin/orders.html">
+  <link rel="icon" href="../assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#4f46e5', light: '#818cf8' }
+          },
+          fontFamily: {
+            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <div class="min-h-screen lg:flex">
+    <aside class="w-full border-b border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900 lg:h-screen lg:w-64 lg:border-r">
+      <a href="../index.html" class="flex items-center gap-2 text-lg font-semibold text-brand">
+        <img src="../assets/icons/logo-mark.svg" alt="News logo" class="h-8 w-8">
+        News Admin
+      </a>
+      <nav class="mt-8 flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 lg:flex-col">
+        <a href="index.html">Overview</a>
+        <a href="users.html">Users</a>
+        <a href="orders.html" class="text-brand">Orders</a>
+        <a href="messages.html">Messages</a>
+      </nav>
+      <button id="adminThemeToggle" class="mt-8 rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] dark:border-white/10">Toggle theme</button>
+    </aside>
+    <main class="flex-1 p-6">
+      <header class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h1 class="font-heading text-3xl font-bold">Orders</h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Recent template and service purchases.</p>
+        </div>
+        <button class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white">Export CSV</button>
+      </header>
+      <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-white/10 dark:bg-slate-900">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-white/70">
+            <tr>
+              <th class="px-4 py-3">Order</th>
+              <th class="px-4 py-3">Customer</th>
+              <th class="px-4 py-3">Package</th>
+              <th class="px-4 py-3">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-100 dark:border-white/10">
+              <td class="px-4 py-3 font-semibold">#204</td>
+              <td class="px-4 py-3">Northwind Cloud</td>
+              <td class="px-4 py-3">Scale plan</td>
+              <td class="px-4 py-3 text-emerald-500">Paid</td>
+            </tr>
+            <tr class="border-t border-slate-100 dark:border-white/10">
+              <td class="px-4 py-3 font-semibold">#205</td>
+              <td class="px-4 py-3">Sahara Bank</td>
+              <td class="px-4 py-3">Localization sprint</td>
+              <td class="px-4 py-3 text-amber-400">Review</td>
+            </tr>
+            <tr class="border-t border-slate-100 dark:border-white/10">
+              <td class="px-4 py-3 font-semibold">#206</td>
+              <td class="px-4 py-3">Atlas Gov</td>
+              <td class="px-4 py-3">Public sector lab</td>
+              <td class="px-4 py-3 text-emerald-500">Paid</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

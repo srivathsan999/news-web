@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Overview</title>
+  <meta name="description" content="News admin dashboard overview with analytics cards and quick links.">
+  <link rel="canonical" href="https://www.example.com/admin/index.html">
+  <link rel="icon" href="../assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#4f46e5', light: '#818cf8' }
+          },
+          fontFamily: {
+            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <div class="min-h-screen lg:flex">
+    <aside class="w-full border-b border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900 lg:h-screen lg:w-64 lg:border-r">
+      <a href="../index.html" class="flex items-center gap-2 text-lg font-semibold text-brand">
+        <img src="../assets/icons/logo-mark.svg" alt="News logo" class="h-8 w-8">
+        News Admin
+      </a>
+      <nav class="mt-8 flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 lg:flex-col">
+        <a href="index.html" class="text-brand">Overview</a>
+        <a href="users.html">Users</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+      </nav>
+      <button id="adminThemeToggle" class="mt-8 rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] dark:border-white/10">Toggle theme</button>
+    </aside>
+    <main class="flex-1 p-6">
+      <header class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h1 class="font-heading text-3xl font-bold">Overview</h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Monitor product health at a glance.</p>
+        </div>
+        <button class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white">New report</button>
+      </header>
+      <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">MRR</p>
+          <p class="mt-2 text-3xl font-bold">$148k</p>
+          <p class="text-sm text-emerald-500">+8.4% MoM</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Tickets</p>
+          <p class="mt-2 text-3xl font-bold">32</p>
+          <p class="text-sm text-amber-400">SLA 98%</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Users</p>
+          <p class="mt-2 text-3xl font-bold">1,248</p>
+          <p class="text-sm text-emerald-500">+64 new</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">NPS</p>
+          <p class="mt-2 text-3xl font-bold">72</p>
+          <p class="text-sm text-emerald-500">Stable</p>
+        </article>
+      </section>
+      <section class="mt-10 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Pipeline</p>
+          <div class="mt-4 h-48 rounded-2xl border border-dashed border-slate-300 dark:border-white/20">
+            <p class="p-4 text-sm text-slate-500">Chart placeholder — connect your visualization via `assets/js/main.js`.</p>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Recent activity</p>
+          <ul class="mt-4 space-y-3 text-sm text-slate-500">
+            <li>• Sara invited Ahmed to workspace “Atlas”.</li>
+            <li>• Invoice #INV-204 paid.</li>
+            <li>• Blog post “RTL QA” published.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

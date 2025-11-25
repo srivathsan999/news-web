@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — News Client Portal</title>
+  <meta name="description" content="Access your News client portal to view files, timelines, and invoices.">
+  <link rel="canonical" href="https://www.example.com/login.html">
+  <meta property="og:title" content="News — Service Experts for Modern Businesses">
+  <meta property="og:description" content="Flexible services template with light/dark modes, RTL support, and Tailwind-powered layouts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.example.com/index.html">
+  <link rel="icon" href="assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#4f46e5',
+              light: '#818cf8'
+            },
+            accent: {
+              DEFAULT: '#0ea5e9'
+            }
+          },
+          fontFamily: {
+            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+    <div class="container relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex shrink-0 items-center gap-2 text-lg font-semibold uppercase tracking-widest text-brand">
+        <img src="assets/icons/logo-mark.svg" alt="News logo mark" class="h-8 w-8">
+        News
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium uppercase tracking-wide lg:flex flex-nowrap ml-6">
+        <a class="nav-link whitespace-nowrap" href="index.html">Home 1</a>
+        <a class="nav-link whitespace-nowrap" href="home2.html">Home 2</a>
+        <div class="relative group categories-group">
+          <a href="#" class="nav-link inline-flex items-center gap-1 leading-none">
+            Categories
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown absolute left-0 top-full z-50 mt-2 hidden min-w-[12rem] rounded-2xl border border-slate-200 bg-white p-3 shadow-xl group-hover:block dark:border-white/10 dark:bg-slate-900">
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="technology.html">Technology</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="business.html">Business</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="sports.html">Sports</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="entertainment.html">Entertainment</a>
+          </div>
+        </div>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="about.html">About</a>
+        
+        <a class="nav-link" href="blog.html#search" aria-label="Search">Search</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="login.html">Login</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="register.html">Register</a>
+      </nav>
+      <div class="flex items-center gap-2 ml-6">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="toggle-btn">
+          <span class="sr-only">Toggle theme</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.05 16.95l-1.42 1.42m12.02 0-1.42-1.42M7.05 7.05 5.63 5.63" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+          </svg>
+        </button>
+        <button id="mobileToggle" class="ml-1 inline-flex items-center rounded-full border border-slate-200 p-2 text-sm font-semibold lg:hidden dark:border-white/10">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="absolute right-4 top-full hidden w-64 rounded-3xl border border-slate-200 bg-white p-4 shadow-xl dark:border-white/10 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wide">
+          <a class="nav-link" href="index.html">Home 1</a>
+          <a class="nav-link" href="home2.html">Home 2</a>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Categories</p>
+          <a class="nav-link" href="technology.html">Technology</a>
+          <a class="nav-link" href="business.html">Business</a>
+          <a class="nav-link" href="sports.html">Sports</a>
+          <a class="nav-link" href="entertainment.html">Entertainment</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="blog.html#search">Search</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="login.html">Login</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="bg-slate-50 dark:bg-slate-900">
+    <section class="bg-slate-50 pt-24 pb-0 dark:bg-slate-900">
+      <div class="container mx-auto max-w-md px-4 text-center">
+        <p class="inline-flex items-center rounded-full border border-brand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Client portal</p>
+        <h1 class="mt-4 font-heading text-3xl font-bold">Welcome back</h1>
+        <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">Use your workspace credentials. Need access? <a href="contact.html" class="text-brand">Contact support</a>.</p>
+        <form class="mt-8 space-y-4 rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-xl dark:border-white/10 dark:bg-slate-950">
+          <div>
+            <label for="loginEmail" class="form-label">Email</label>
+            <input id="loginEmail" type="email" required class="form-input" placeholder="you@company.com">
+          </div>
+          <div>
+            <label for="loginPassword" class="form-label">Password</label>
+            <input id="loginPassword" type="password" required class="form-input" placeholder="••••••••">
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand">
+              <span class="text-slate-500">Remember me</span>
+            </label>
+            <a href="reset.html" class="text-brand">Forgot?</a>
+          </div>
+          <button type="submit" class="w-full rounded-full bg-brand px-6 py-3 font-semibold text-white">Sign in</button>
+        </form>
+        <p class="mt-6 text-sm text-slate-500 dark:text-slate-300">No account yet? <a href="register.html" class="text-brand">Create one</a>.</p>
+      </div>
+    </section>
+  </main>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "News Studio",
+      "url": "https://www.example.com/",
+      "logo": "https://www.example.com/assets/icons/logo-mark.svg",
+      "sameAs": [
+        "https://www.linkedin.com/company/example",
+        "https://twitter.com/example"
+      ],
+      "areaServed": "Global",
+      "availableLanguage": ["en", "ar", "fr"]
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

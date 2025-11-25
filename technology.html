@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology — News</title>
+  <link rel="icon" href="assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#4f46e5', light: '#818cf8' }, accent: { DEFAULT: '#0ea5e9' } },
+          fontFamily: { heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-white text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+    <div class="container relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex shrink-0 items-center gap-2 text-lg font-semibold uppercase tracking-widest text-brand">
+        <img src="assets/icons/logo-mark.svg" alt="News logo mark" class="h-8 w-8">
+        News
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium uppercase tracking-wide lg:flex flex-nowrap ml-6">
+        <a class="nav-link whitespace-nowrap" href="index.html">Home 1</a>
+        <a class="nav-link whitespace-nowrap" href="home2.html">Home 2</a>
+        <div class="relative group categories-group">
+          <a href="#" class="nav-link inline-flex items-center gap-1 leading-none">Categories
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="dropdown absolute left-0 top-full z-50 mt-2 hidden min-w-[12rem] rounded-2xl border border-slate-200 bg-white p-3 shadow-xl group-hover:block dark:border-white/10 dark:bg-slate-900">
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="technology.html">Technology</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="business.html">Business</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="sports.html">Sports</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="entertainment.html">Entertainment</a>
+          </div>
+        </div>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="about.html">About</a>
+        
+        <a class="nav-link" href="blog.html#search" aria-label="Search">Search</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="login.html">Login</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="register.html">Register</a>
+      </nav>
+      <div class="flex items-center gap-2 ml-6">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="toggle-btn"><span class="sr-only">Toggle theme</span>🌓</button>
+        <button id="mobileToggle" class="ml-1 inline-flex items-center rounded-full border border-slate-200 p-2 text-sm font-semibold lg:hidden dark:border-white/10"><span class="sr-only">Open menu</span>☰</button>
+      </div>
+      <div id="mobileMenu" class="absolute right-4 top-full hidden w-64 rounded-3xl border border-slate-200 bg-white p-4 shadow-xl dark:border-white/10 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wide">
+          <a class="nav-link" href="index.html">Home 1</a>
+          <a class="nav-link" href="home2.html">Home 2</a>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Categories</p>
+          <a class="nav-link" href="technology.html">Technology</a>
+          <a class="nav-link" href="business.html">Business</a>
+          <a class="nav-link" href="sports.html">Sports</a>
+          <a class="nav-link" href="entertainment.html">Entertainment</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          
+          <a class="nav-link" href="blog.html#search">Search</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="login.html">Login</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="bg-slate-50 py-16 dark:bg-slate-900">
+      <div class="container mx-auto max-w-6xl px-4 text-center">
+        <p class="inline-flex items-center rounded-full border border-brand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Category</p>
+        <h1 class="mt-4 font-heading text-4xl font-bold">Technology</h1>
+        <p class="mt-3 text-base text-slate-600 dark:text-slate-300">Updates on AI, software, devices, and the future of work.</p>
+      </div>
+    </section>
+    <section class="py-12">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="AI" class="h-44 w-full rounded-xl object-cover">
+            <h3 class="mt-4 text-lg font-semibold">AI breakthroughs reshape daily tools</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">From copilots to coding assistants, productivity is accelerating.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Serverless and edge computing" class="h-44 w-full rounded-xl object-cover">
+            <h3 class="mt-4 text-lg font-semibold">Cloud-native stacks go mainstream</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Teams adopt serverless and edge to scale faster.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Hardware" class="h-44 w-full rounded-xl object-cover">
+            <h3 class="mt-4 text-lg font-semibold">Hardware gets smarter</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Chips and sensors power richer experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950 text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black"></div>
+    <div class="relative">
+      <div class="container mx-auto max-w-6xl px-4 py-16">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <img src="assets/icons/logo-mark.svg" alt="Company logo" class="h-6 w-6">
+              <p class="text-lg font-semibold tracking-wide">News Magazine</p>
+            </div>
+            <p class="text-sm text-white/70">Stories that move the culture forward.</p>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.4em] text-white/60"><span class="h-2 w-2 rounded-full bg-brand"></span>Global Desk</div>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Navigation</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="index.html">Home</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html">Categories</a></li>
+              <li><a class="hover:text-brand-light" href="about.html">About</a></li>
+              <li><a class="hover:text-brand-light" href="contact.html">Contact</a></li>
+              <li><a class="hover:text-brand-light" href="pricing.html">Membership</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Categories</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="technology.html">Technology</a></li>
+              <li><a class="hover:text-brand-light" href="business.html">Business</a></li>
+              <li><a class="hover:text-brand-light" href="sports.html">Sports</a></li>
+              <li><a class="hover:text-brand-light" href="entertainment.html">Entertainment</a></li>
+            </ul>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Newsletter</p>
+              <p class="mt-2 text-sm text-white/70">Weekly briefings. No noise.</p>
+              <form class="mt-4 flex flex-col gap-3 sm:flex-row" action="#" method="post">
+                <label class="sr-only" for="footer-email">Email address</label>
+                <input id="footer-email" type="email" required placeholder="Email address" class="w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none">
+                <button type="submit" class="rounded-2xl bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-light">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>© 2025 News Magazine. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="privacy.html" class="hover:text-brand-light">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-brand-light">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

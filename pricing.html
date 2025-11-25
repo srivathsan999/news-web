@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — News plans & retainers</title>
+  <meta name="description" content="Transparent pricing for News templates, sprint programs, and retainers.">
+  <link rel="canonical" href="https://www.example.com/pricing.html">
+  <meta property="og:title" content="News — Service Experts for Modern Businesses">
+  <meta property="og:description" content="Flexible services template with light/dark modes, RTL support, and Tailwind-powered layouts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.example.com/index.html">
+  <link rel="icon" href="assets/icons/logo-mark.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#4f46e5',
+              light: '#818cf8'
+            },
+            accent: {
+              DEFAULT: '#0ea5e9'
+            }
+          },
+          fontFamily: {
+            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-white text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+    <div class="container relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex shrink-0 items-center gap-2 text-lg font-semibold uppercase tracking-widest text-brand">
+        <img src="assets/icons/logo-mark.svg" alt="News logo mark" class="h-8 w-8">
+        News
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium uppercase tracking-wide lg:flex flex-nowrap ml-6">
+        <a class="nav-link whitespace-nowrap" href="index.html">Home 1</a>
+        <a class="nav-link whitespace-nowrap" href="home2.html">Home 2</a>
+        <div class="relative group categories-group">
+          <a href="#" class="nav-link inline-flex items-center gap-1 leading-none">
+            Categories
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown absolute left-0 top-full z-50 mt-2 hidden min-w-[12rem] rounded-2xl border border-slate-200 bg-white p-3 shadow-xl group-hover:block dark:border-white/10 dark:bg-slate-900">
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="technology.html">Technology</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="business.html">Business</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="sports.html">Sports</a>
+            <a class="block rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-white/5" href="entertainment.html">Entertainment</a>
+          </div>
+        </div>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="blog.html#search" aria-label="Search">Search</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="login.html">Login</a>
+        <a class="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-900 shadow hover:bg-white/90 dark:border-white/10" href="register.html">Register</a>
+      </nav>
+      <div class="flex items-center gap-2 ml-6">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="toggle-btn">
+          <span class="sr-only">Toggle theme</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.05 16.95l-1.42 1.42m12.02 0-1.42-1.42M7.05 7.05 5.63 5.63" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+          </svg>
+        </button>
+        <button id="mobileToggle" class="ml-1 inline-flex items-center rounded-full border border-slate-200 p-2 text-sm font-semibold lg:hidden dark:border-white/10">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="absolute right-4 top-full hidden w-64 rounded-3xl border border-slate-200 bg-white p-4 shadow-xl dark:border-white/10 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wide">
+          <a class="nav-link" href="index.html">Home 1</a>
+          <a class="nav-link" href="home2.html">Home 2</a>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Categories</p>
+          <a class="nav-link" href="technology.html">Technology</a>
+          <a class="nav-link" href="business.html">Business</a>
+          <a class="nav-link" href="sports.html">Sports</a>
+          <a class="nav-link" href="entertainment.html">Entertainment</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          
+          <a class="nav-link" href="blog.html#search">Search</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="login.html">Login</a>
+          <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-center font-semibold text-slate-900" href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="bg-slate-50 py-16 dark:bg-slate-900">
+      <div class="container mx-auto max-w-5xl px-4 text-center">
+        <p class="inline-flex items-center rounded-full border border-brand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-brand">Pricing</p>
+        <h1 class="mt-4 font-heading text-4xl font-bold">Options for launches, optimizations, and retainers</h1>
+        <p class="mt-4 text-base text-slate-500 dark:text-slate-300">Switch between monthly and annual commitments with one toggle. The JS helper updates price labels automatically.</p>
+        <div class="mt-8 inline-flex items-center gap-3 rounded-full border border-slate-200 px-3 py-2 text-sm dark:border-white/10">
+          <span>Monthly</span>
+          <button id="billingToggle" class="relative h-6 w-12 rounded-full bg-brand/30 transition">
+            <span class="absolute left-1 top-1 inline-block h-4 w-4 rounded-full bg-white shadow"></span>
+          </button>
+          <span>Annual <span class="text-emerald-400">-15%</span></span>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto grid max-w-6xl gap-8 px-4 lg:grid-cols-3">
+        <article class="pricing-card text-center flex flex-col">
+          <p class="text-xs uppercase tracking-[0.3em] text-brand">Launch</p>
+          <h2 class="mt-2 text-4xl font-bold" data-price-monthly="$4.5k" data-price-annual="$3.8k">$4.5k</h2>
+          <p class="text-sm text-slate-500">Per month · Cancel anytime</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✔ 1 live site + blog</li>
+            <li>✔ Theme & RTL toggles</li>
+            <li>✔ Contact + pricing forms</li>
+          </ul>
+          <div class="mt-auto pt-4 pb-4">
+            <a href="register.html" class="inline-block rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white shadow hover:bg-brand-light">Start trial</a>
+          </div>
+        </article>
+        <article class="pricing-card text-center flex flex-col border-brand bg-brand/5 dark:border-brand/40">
+          <p class="text-xs uppercase tracking-[0.3em] text-brand">Scale</p>
+          <h2 class="mt-2 text-4xl font-bold" data-price-monthly="$8.5k" data-price-annual="$7.2k">$8.5k</h2>
+          <p class="text-sm text-slate-500">Per month · Includes admin suite</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✔ Admin analytics + users + orders</li>
+            <li>✔ Component library license</li>
+            <li>✔ Quarterly refresh session</li>
+          </ul>
+          <div class="mt-auto pt-4 pb-4">
+            <a href="contact.html" class="inline-block rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white shadow hover:bg-brand-light">Talk to sales</a>
+          </div>
+        </article>
+        <article class="pricing-card text-center flex flex-col">
+          <p class="text-xs uppercase tracking-[0.3em] text-brand">Enterprise</p>
+          <h2 class="mt-2 text-4xl font-bold" data-price-monthly="Custom" data-price-annual="Custom">Custom</h2>
+          <p class="text-sm text-slate-500">Security reviews + SLAs</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✔ Dedicated ops pod</li>
+            <li>✔ Unlimited locales</li>
+            <li>✔ White-glove onboarding</li>
+          </ul>
+          <div class="mt-auto pt-4 pb-4">
+            <a href="contact.html" class="inline-block rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white shadow hover:bg-brand-light">Request proposal</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="bg-slate-50 py-16 dark:bg-slate-900/40">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-brand">Compare</p>
+            <h2 class="mt-4 font-heading text-3xl font-bold text-slate-900 dark:text-white">Plan checklist</h2>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-300">See how each plan handles launch scope, admin tooling, and localization QA.</p>
+          </div>
+          <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl dark:border-white/10 dark:bg-slate-900">
+            <table class="w-full text-sm text-slate-600 dark:text-white/80">
+              <thead class="bg-slate-100 text-slate-500 dark:bg-white/5 dark:text-white/70">
+                <tr>
+                  <th class="px-4 py-3 text-left font-semibold">Feature</th>
+                  <th class="px-4 py-3 text-left">
+                    <span class="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">Launch</span>
+                  </th>
+                  <th class="px-4 py-3 text-left">
+                    <span class="rounded-full bg-blue-600/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-blue-600">Scale</span>
+                  </th>
+                  <th class="px-4 py-3 text-left">
+                    <span class="rounded-full bg-slate-900 text-white px-3 py-1 text-xs font-semibold uppercase tracking-widest dark:bg-white dark:text-slate-900">Enterprise</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-slate-100 dark:border-white/10">
+                  <td class="px-4 py-4 font-semibold text-slate-900 dark:text-white">Pages included</td>
+                  <td class="px-4 py-4">13</td>
+                  <td class="px-4 py-4">17</td>
+                  <td class="px-4 py-4">Unlimited</td>
+                </tr>
+                <tr class="border-t border-slate-100 bg-slate-50 dark:border-white/10 dark:bg-white/5">
+                  <td class="px-4 py-4 font-semibold text-slate-900 dark:text-white">Admin dashboard</td>
+                  <td class="px-4 py-4">Lite</td>
+                  <td class="px-4 py-4">Full suite</td>
+                  <td class="px-4 py-4">Custom data</td>
+                </tr>
+                <tr class="border-t border-slate-100 dark:border-white/10">
+                  <td class="px-4 py-4 font-semibold text-slate-900 dark:text-white">Localization QA</td>
+                  <td class="px-4 py-4">Guided</td>
+                  <td class="px-4 py-4">Included</td>
+                  <td class="px-4 py-4">Dedicated team</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div class="rounded-3xl border border-slate-200 p-8 dark:border-white/10">
+          <p class="text-xs uppercase tracking-[0.3em] text-brand">FAQ</p>
+          <div class="mt-4 space-y-3">
+            <details class="faq">
+              <summary>Can we switch plans later?</summary>
+              <p>Yes, changes take effect next billing cycle. Annual clients can true-up quarterly.</p>
+            </details>
+            <details class="faq">
+              <summary>Do you offer white-label rights?</summary>
+              <p>Scale + Enterprise plans can white-label after signing the license addendum.</p>
+            </details>
+            <details class="faq">
+              <summary>هل تشمل الأسعار دعم اللغة العربية؟</summary>
+              <p>نعم، يتم تضمين مراجعة RTL ونصوص جاهزة للترجمة في باقات Scale وEnterprise.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950 text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black"></div>
+    <div class="relative">
+      <div class="container mx-auto max-w-6xl px-4 py-16">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <img src="assets/icons/logo-mark.svg" alt="Company logo" class="h-6 w-6">
+              <p class="text-lg font-semibold tracking-wide">News Magazine</p>
+            </div>
+            <p class="text-sm text-white/70">Stories that move the culture forward. Independent journalism covering technology, lifestyle, design, travel, and the world ahead.</p>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.4em] text-white/60">
+              <span class="h-2 w-2 rounded-full bg-brand"></span>
+              Global Desk
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Navigation</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="index.html">Home</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html">Categories</a></li>
+              <li><a class="hover:text-brand-light" href="about.html">About</a></li>
+              <li><a class="hover:text-brand-light" href="contact.html">Contact</a></li>
+              <li><a class="hover:text-brand-light" href="pricing.html">Membership</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Categories</p>
+            <ul class="mt-5 space-y-2 text-sm text-white/80">
+              <li><a class="hover:text-brand-light" href="blog.html#technology">Technology</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#lifestyle">Lifestyle</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#travel">Travel</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#health">Health &amp; Fitness</a></li>
+              <li><a class="hover:text-brand-light" href="blog.html#business">Business</a></li>
+            </ul>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Follow us</p>
+              <div class="mt-5 flex gap-3">
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.linkedin.com" aria-label="LinkedIn">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5a2.5 2.5 0 11-.01 5.001 2.5 2.5 0 01.01-5.001zM3 8.75h3.96V21H3zM9.75 8.75h3.8v1.68h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21H18.1v-5.47c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9.75z"/>
+                  </svg>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.instagram.com" aria-label="Instagram">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 2c-2.76 0-5 2.24-5 5v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A5.5 5.5 0 1017.5 13 5.51 5.51 0 0012 7.5zm0 2A3.5 3.5 0 1115.5 13 3.5 3.5 0 0112 9.5zm6.25-3a1 1 0 11-1 1 1 1 0 011-1z"/>
+                  </svg>
+                  <span class="sr-only">Instagram</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.facebook.com" aria-label="Facebook">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.5 9H16l.5-3h-3V4.75C13.5 4.06 13.77 3.5 14.9 3.5H16V1.14C15.76 1.1 15 1 13.96 1 11.8 1 10.34 2.24 10.34 4.52V6H8v3h2.34V21h3.16V9z"/>
+                  </svg>
+                  <span class="sr-only">Facebook</span>
+                </a>
+                <a class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-white hover:border-brand hover:text-brand-light" href="https://www.twitter.com" aria-label="Twitter">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.273l-7.16 8.19L22.5 21.75h-6.406l-5.023-6.576-5.73 6.576H2.064l7.66-8.8L1.5 2.25h6.594l4.546 5.983zM17.156 19.59h1.813L7.02 4.31H5.078z"/>
+                  </svg>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.4em] text-brand-light">Newsletter</p>
+              <p class="mt-2 text-sm text-white/70">Weekly briefings on design, product, and culture. No noise.</p>
+              <form class="mt-4 flex flex-col gap-3 sm:flex-row" action="#" method="post">
+                <label class="sr-only" for="footer-email-pricing">Email address</label>
+                <input id="footer-email-pricing" type="email" required placeholder="Email address" class="w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none">
+                <button type="submit" class="rounded-2xl bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-light">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>© 2025 News Magazine. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="privacy.html" class="hover:text-brand-light">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-brand-light">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "News Studio",
+      "url": "https://www.example.com/",
+      "logo": "https://www.example.com/assets/icons/logo-mark.svg",
+      "sameAs": [
+        "https://www.linkedin.com/company/example",
+        "https://twitter.com/example"
+      ],
+      "areaServed": "Global",
+      "availableLanguage": ["en", "ar", "fr"]
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
